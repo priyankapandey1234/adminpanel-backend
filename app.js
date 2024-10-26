@@ -13,6 +13,8 @@ app.use('/api/v1/auth',userRoute)
 app.use('/api/v1/job_post',jobPostRoute)
 app.use('/api/v1/candidate',candidateRoute)
 
-
+app.get('/',(req,res)=>{
+res.send("ok")
+})
 
 module.exports = app
