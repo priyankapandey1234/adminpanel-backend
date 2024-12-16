@@ -1,4 +1,4 @@
-const JobPost = require("../Model/JobPost");
+const JobPost = require("../Model/job/JobPost");
 
 
 
