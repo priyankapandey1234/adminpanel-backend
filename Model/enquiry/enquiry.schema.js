@@ -8,12 +8,12 @@ const enquirySchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        match: [/^\S+@\S+\.\S+$/, 'Please provide a valid email address.'] // Email format validation
+        // match: [/^\S+@\S+\.\S+$/, 'Please provide a valid email address.'] // Email format validation
     },
     phone: {
         type: String,
         required: true,
-        match: [/^\d{10}$/, 'Please provide a valid 10-digit phone number.'] // Phone number validation (adjust as needed)
+        // match: [/^\d{10}$/, 'Please provide a valid 10-digit phone number.'] // Phone number validation (adjust as needed)
     },
     checked: {
         type: Boolean,
