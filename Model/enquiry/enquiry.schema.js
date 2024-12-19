@@ -18,7 +18,7 @@ const enquirySchema = new mongoose.Schema({
     message:{
         type:String,
     }
-});
+},{timeStamp:true});
 
  const Enquiry = mongoose.model("enquiries", enquirySchema);
 module.exports=Enquiry
