@@ -14,6 +14,9 @@ const enquirySchema = new mongoose.Schema({
     checked: {
         type: Boolean,
         default: false
+    },
+    message:{
+        type:String,
     }
 });
 

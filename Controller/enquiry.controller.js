@@ -3,12 +3,13 @@ const Enquiry = require("../Model/enquiry/enquiry.schema")
 // Create a new enquiry
 exports.createEnquiry = async (req, res) => {
     try {
-        const { name, email, phone } = req.body;
+        const { name, email, phone,message } = req.body;
 
         const newEnquiry = new Enquiry({
             name,
             email,
             phone,
+            message,
             checked: false,  // Default value
         });
 
