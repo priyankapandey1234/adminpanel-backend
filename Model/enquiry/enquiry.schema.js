@@ -2,23 +2,27 @@ const { mongoose } = require("mongoose");
 
 const enquirySchema = new mongoose.Schema({
     name: {
-        type: String
+        type: String,
+        required: true // make name required if needed
     },
     email: {
-        type: String,  
+        type: String,
+        required: true,
+        match: [/^\S+@\S+\.\S+$/, 'Please provide a valid email address.'] // Email format validation
     },
     phone: {
         type: String,
-        required: true
+        required: true,
+        match: [/^\d{10}$/, 'Please provide a valid 10-digit phone number.'] // Phone number validation (adjust as needed)
     },
     checked: {
         type: Boolean,
         default: false
     },
-    message:{
-        type:String,
+    message: {
+        type: String,
     }
-},{timeStamp:true});
+}, { timestamps: true }); // use timestamps instead of timeStamp
 
- const Enquiry = mongoose.model("enquiries", enquirySchema);
-module.exports=Enquiry
+const Enquiry = mongoose.model("Enquiry", enquirySchema);
+module.exports = Enquiry;
